@@ -23,3 +23,25 @@
 }
 
  add_action('wp_enqueue_scripts','bootstrapCssAndJsCalling');
+
+
+ //theme function header area navbar icon
+ function accessCustomizationRegister($wp_customize){
+    $wp_customize->add_section('headerArea', array(
+        'title' =>__('Header Area', 'languageChangeOption'),
+        'description' => 'Update logo if needed',
+    ));
+
+    $wp_customize->add_setting('logo', array(
+        'default' => get_bloginfo('template_directory') . './img/logo.png',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'logo', array(
+        'label' => 'Logo Upload',
+        'description' => 'Choose a good looking header',
+        'setting' => 'logo',
+        'section' => 'headerArea', 
+    )));
+ }
+
+ add_action('customize_register','accessCustomizationRegister');

@@ -1,0 +1,9 @@
+/* common css */
+img{
+    max-width: 100%;
+}
+
+/* individual id */
+#header_area{
+    padding-top: 20px;
+}

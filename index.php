@@ -11,6 +11,14 @@
     <?php wp_head(  ); ?>
 </head>
 <body <?php body_class(); ?>>
+<div id="header_area"></div>
+    <div class="container">
+        <div class="row col-md-3">
+            <a href=""><img src="<?php echo get_theme_mod('logo');  ?>" alt=""></a>
+        </div>
+        <div class="row col-md-9"></div>
+    </div>
+</div>
     
 
 
