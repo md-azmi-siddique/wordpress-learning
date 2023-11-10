@@ -8,3 +8,7 @@ Text Domain: learning
 Description: learning of wordpress
 Tags: many tag
 */
+
+body{
+    background-color: yellow;
+}
